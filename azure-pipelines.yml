@@ -12,19 +12,21 @@ pool:
 container: ubuntu:16.04
 
 steps:
-- task: JFrog.jfrog-artifactory-vsts-extension.artifactory-generic-download.ArtifactoryGenericDownload@2
-  displayName: 'Artifactory Generic Download'
+- task: ArtifactoryGenericDownload@2
   inputs:
     connection: 'barb3-aol'
+    specSource: 'taskConfiguration'
     fileSpec: |
-     {
-       "files": [
-         {
-           "pattern": "generic-local/tfs-sanity/a1.in*",
-           "target": "files1\39\",
-           "flat": "true"
-         }
-       ]
-     }
+      {
+        "files": [
+          {
+            "pattern": "generic-local/tfs-sanity/a1.in*",
+            "target": "files1\39\",
+            "flat": "true"
+          }
+        ]
+      }
     collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
     failNoOp: false
