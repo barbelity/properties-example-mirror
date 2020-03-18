@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-16.04'
+
+container: ubuntu:16.04
+
+steps:
+- task: JFrog.jfrog-artifactory-vsts-extension.artifactory-generic-download.ArtifactoryGenericDownload@2
+  displayName: 'Artifactory Generic Download'
+  inputs:
+    connection: 'barb3-aol'
+    fileSpec: |
+     {
+       "files": [
+         {
+           "pattern": "generic-local/tfs-sanity/a1.in*",
+           "target": "files1\39\",
+           "flat": "true"
+         }
+       ]
+     }
+    collectBuildInfo: true
+    failNoOp: false
