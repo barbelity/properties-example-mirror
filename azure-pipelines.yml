@@ -9,7 +9,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-16.04'
 
-container: ubuntu:16.04
+container: 
+  image: ubuntu:16.04
+  options: --volume $(Agent.WorkFolder):$(Agent.WorkFolder)
 
 steps:
 - task: ArtifactoryGenericDownload@2
