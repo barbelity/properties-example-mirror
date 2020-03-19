@@ -14,7 +14,10 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'update-ca-certificates'
+    script: |
+      apt-get update
+      apt-get install -y ca-certificates
+      update-ca-certificates
 - task: ArtifactoryGenericDownload@2
   inputs:
     connection: 'ecosys-artifactory'
