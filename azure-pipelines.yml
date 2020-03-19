@@ -26,7 +26,7 @@ steps:
       sudo update-ca-certificates
 - task: ArtifactoryGenericDownload@2
   inputs:
-    connection: 'bar-aol'
+    connection: 'barb3-aol'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
