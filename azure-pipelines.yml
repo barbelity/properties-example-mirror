@@ -6,13 +6,16 @@
 trigger:
 - master
 
+container: 
+  image: ubuntu:16.04
+
 pool:
   vmImage: 'ubuntu-16.04'
 
 steps:
 - task: ArtifactoryGenericDownload@2
   inputs:
-    connection: 'barb3-aol'
+    connection: 'ecosys-artifactory'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
