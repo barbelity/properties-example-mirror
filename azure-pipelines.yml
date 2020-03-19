@@ -7,10 +7,10 @@ trigger:
 - master
 
 container: 
-  image: 'windows-2019'
+  image: 'mcr.microsoft.com/windows/servercore:ltsc2019'
 
 pool:
-  vmImage: 'mcr.microsoft.com/windows/servercore:ltsc2019'
+  vmImage: 'windows-2019'
 
 steps:
 - task: ArtifactoryGenericDownload@2
