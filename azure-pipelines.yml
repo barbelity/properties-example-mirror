@@ -23,7 +23,7 @@ steps:
         "files": [
           {
             "pattern": "generic-local/tfs-sanity/a1.in*",
-            "target": "files1\39\",
+            "target": "files1/39/",
             "flat": "true"
           }
         ]
