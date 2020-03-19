@@ -7,10 +7,10 @@ trigger:
 - master
 
 container: 
-  image: ubuntu:18.04
+  image: ubuntu:19.10
 
 pool:
-  vmImage: 'ubuntu-18.04'
+  vmImage: 'ubuntu-19.10'
 
 steps:
 - task: ArtifactoryGenericDownload@2
