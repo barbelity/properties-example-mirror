@@ -21,9 +21,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      apt-get update
-      apt-get install -y ca-certificates
-      update-ca-certificates
+      sudo apt-get update
+      sudo apt-get install -y ca-certificates
+      sudo update-ca-certificates
 - task: ArtifactoryGenericDownload@2
   inputs:
     connection: 'ecosys-artifactory'
