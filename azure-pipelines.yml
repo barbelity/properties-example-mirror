@@ -30,7 +30,7 @@ steps:
     script: |
       #echo $AGENT_TOOLSDIRECTORY
       sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current
-      sudo apt-get install -y curl
+      sudo apt install curl
       sudo curl -fL https://getcli.jfrog.io
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
 
