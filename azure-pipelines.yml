@@ -27,10 +27,11 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current/
-      sudo apt install curl
-      sudo curl -fL https://getcli.jfrog.io
-      sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
+      echo $AGENT_TOOLSDIRECTORY
+      #sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current/
+      #sudo apt install curl
+      #sudo curl -fL https://getcli.jfrog.io
+      #sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
 
 - task: ArtifactoryGenericDownload@2
   inputs:
