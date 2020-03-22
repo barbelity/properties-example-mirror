@@ -31,7 +31,7 @@ steps:
       #echo $AGENT_TOOLSDIRECTORY
       sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current
       sudo apt-get update
-      sudo apt-get -y install curl
+      sudo apt-get -qq -y install curl
       sudo curl -fL https://getcli.jfrog.io
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
 
