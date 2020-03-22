@@ -38,6 +38,7 @@ steps:
       echo "FINISHED DOWNLOADING"
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
       cd $AGENT_TOOLSDIRECTORY/_jforg/current/
+      pwd
       ls -al
 - task: ArtifactoryGenericDownload@2
   inputs:
