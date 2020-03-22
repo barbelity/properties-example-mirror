@@ -24,6 +24,9 @@ steps:
       sudo apt-get update
       sudo apt-get install -y ca-certificates
       sudo update-ca-certificates
+      sudo apt install curl
+      curl -fL https://getcli.jfrog.io | sh
+      mv jfrog $AGENT_TOOLSDIRECTORY
 - task: ArtifactoryGenericDownload@2
   inputs:
     connection: 'barb3-aol'
