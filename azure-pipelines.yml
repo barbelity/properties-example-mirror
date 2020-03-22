@@ -21,17 +21,18 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      sudo apt-get update
-      sudo apt-get install -y ca-certificates
-      sudo update-ca-certificates
+      #sudo apt-get update
+      #sudo apt-get install -y ca-certificates
+      #sudo update-ca-certificates
+
 - task: CmdLine@2
   inputs:
     script: |
-      echo $AGENT_TOOLSDIRECTORY
-      #sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current/
-      #sudo apt install curl
-      #sudo curl -fL https://getcli.jfrog.io
-      #sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
+      #echo $AGENT_TOOLSDIRECTORY
+      sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current
+      sudo apt-get install -y curl
+      sudo curl -fL https://getcli.jfrog.io
+      sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
 
 - task: ArtifactoryGenericDownload@2
   inputs:
