@@ -37,10 +37,11 @@ steps:
       curl -fL https://getcli.jfrog.io | sh
       sudo chmod +x jfrog
       echo "FINISHED DOWNLOADING"
-      sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jfrog/current/
+      #sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jfrog/current/
 
-      #export AGENT_WORKDIR=_t
-      pwd
+      export AGENT_WORKDIR=/__w/1/s/jfcli
+      sudo $AGENT_WORKDIR
+      sudo mv jfrog $AGENT_WORKDIR/
 
       cd $AGENT_TOOLSDIRECTORY/_jfrog/current/
       pwd
