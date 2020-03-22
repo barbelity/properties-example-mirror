@@ -32,7 +32,7 @@ steps:
       sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current
       sudo apt-get update
       sudo apt-get -qq -y install curl
-      sudo curl -fL https://getcli.jfrog.io
+      sudo curl https://api.bintray.com/content/jfrog/jfrog-cli-go/$latest/jfrog-cli-linux-386/jfrog?bt_package=jfrog-cli-linux-386 --output jfrog
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
 
 - task: ArtifactoryGenericDownload@2
