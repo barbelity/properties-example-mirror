@@ -35,7 +35,10 @@ steps:
     script: |
       sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jforg/current
       sudo curl https://api.bintray.com/content/jfrog/jfrog-cli-go/$latest/jfrog-cli-linux-386/jfrog?bt_package=jfrog-cli-linux-386 --output jfrog
+      echo "FINISHED DOWNLOADING"
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jforg/current/
+      cd $AGENT_TOOLSDIRECTORY/_jforg/current/
+      ls -al
 - task: ArtifactoryGenericDownload@2
   inputs:
     connection: 'barb3-aol'
