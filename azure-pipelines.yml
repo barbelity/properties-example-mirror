@@ -42,6 +42,7 @@ steps:
       export AGENT_WORKFOLDER=/__w/1/s/jfcli
       sudo mkdir -p $AGENT_WORKFOLDER/_jfrog/current
       sudo mv jfrog $AGENT_WORKFOLDER/_jfrog/current/
+      echo `$AGENT_WORKFOLDER/_jfrog/current/`
 
       cd $AGENT_TOOLSDIRECTORY/_jfrog/current/
       pwd
