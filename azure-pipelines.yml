@@ -50,7 +50,7 @@ steps:
       ls -al
 - task: ArtifactoryGenericDownload@2
   env:
-    AGENT_WORKFOLDER: "/__w/1/s/jfcli"
+    AGENT_WORKFOLDER: /__w/1/s/jfcli
   inputs:
     connection: 'barb3-aol'
     specSource: 'taskConfiguration'
