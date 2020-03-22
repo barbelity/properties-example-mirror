@@ -35,6 +35,7 @@ steps:
     script: |
       sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jfrog/current
       sudo curl https://api.bintray.com/content/jfrog/jfrog-cli-go/$latest/jfrog-cli-linux-386/jfrog?bt_package=jfrog-cli-linux-386 --output jfrog
+      sudo chmod +x jfrog
       echo "FINISHED DOWNLOADING"
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jfrog/current/
       cd $AGENT_TOOLSDIRECTORY/_jfrog/current/
