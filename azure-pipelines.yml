@@ -38,6 +38,10 @@ steps:
       sudo chmod +x jfrog
       echo "FINISHED DOWNLOADING"
       sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jfrog/current/
+
+      #export AGENT_WORKDIR=_t
+      pwd
+
       cd $AGENT_TOOLSDIRECTORY/_jfrog/current/
       pwd
       ls -al
