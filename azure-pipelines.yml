@@ -48,9 +48,8 @@ steps:
       #cd $AGENT_TOOLSDIRECTORY/_jfrog/current/
       pwd
       ls -al
+      echo "##vso[task.setvariable variable=AGENT_WORKFOLDER]$AGENT_WORKFOLDER"
 - task: ArtifactoryGenericDownload@2
-  env:
-    AGENT_WORKFOLDER: /__w/1/s/jfcli
   inputs:
     connection: 'barb3-aol'
     specSource: 'taskConfiguration'
