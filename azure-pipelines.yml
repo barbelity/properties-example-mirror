@@ -31,6 +31,7 @@ steps:
       sudo apt-get update
       sudo apt-get -qq -y install curl
 - task: CmdLine@2
+  name: ProduceVar
   inputs:
     script: |
       sudo mkdir -p $AGENT_TOOLSDIRECTORY/_jfrog/current
@@ -49,7 +50,7 @@ steps:
       ls -al
 - task: ArtifactoryGenericDownload@2
   env:
-    AGENT_WORKFOLDER: '/__w/1/s/jfcli'
+    AGENT_WORKFOLDER: "/__w/1/s/jfcli"
   inputs:
     connection: 'barb3-aol'
     specSource: 'taskConfiguration'
