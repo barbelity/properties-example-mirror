@@ -40,7 +40,7 @@ steps:
       echo "FINISHED DOWNLOADING"
       #sudo mv jfrog $AGENT_TOOLSDIRECTORY/_jfrog/current/
 
-      export AGENT_WORKFOLDER=/__w/1/s/jfcli
+      #export AGENT_WORKFOLDER=/__w/1/s/jfcli
       sudo mkdir -p $AGENT_WORKFOLDER/_jfrog/current
       sudo mv jfrog $AGENT_WORKFOLDER/_jfrog/current/
       cd $AGENT_WORKFOLDER/_jfrog/current/
@@ -48,7 +48,7 @@ steps:
       #cd $AGENT_TOOLSDIRECTORY/_jfrog/current/
       pwd
       ls -al
-      echo "##vso[task.setvariable variable=AGENT_WORKFOLDER]$AGENT_WORKFOLDER"
+      #echo "##vso[task.setvariable variable=AGENT_WORKFOLDER]$AGENT_WORKFOLDER"
 - task: ArtifactoryGenericDownload@2
   inputs:
     connection: 'barb3-aol'
